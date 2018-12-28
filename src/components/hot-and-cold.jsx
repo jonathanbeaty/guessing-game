@@ -1,13 +1,15 @@
 import React from "react";
 
 import Header from "./header";
+import Form from "./form";
 
 export default class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       input: "",
-      guess: 0
+      guess: 0,
+      header: "Make Your Guess!"
     };
   }
 
@@ -21,6 +23,7 @@ export default class Main extends React.Component {
     return (
       <div>
         <Header />
+        <Form />
       </div>
     );
   }
