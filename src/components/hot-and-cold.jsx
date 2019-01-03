@@ -8,9 +8,19 @@ export default class Main extends React.Component {
     super(props);
     this.state = {
       input: "",
-      guess: 0,
-      header: "Make Your Guess!"
+      guessCount: 0,
+      statement: "Make Your Guess!",
+      correctAnswer: Math.floor(Math.random() * 100) + 1
     };
+  }
+
+  restartGame() {
+    this.setState({
+      input: "",
+      guessCount: 0,
+      statement: "Make Your Guess!",
+      correctAnswer: Math.floor(Math.random() * 100) + 1
+    });
   }
 
   updateInput() {
@@ -20,10 +30,11 @@ export default class Main extends React.Component {
   }
 
   render() {
+    const { statement, guessCount } = this.state;
     return (
       <div>
         <Header />
-        <Form />
+        <Form statement={statement} guessCount={guessCount} />
       </div>
     );
   }

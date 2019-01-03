@@ -1,0 +1,10 @@
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.guess-button:hover {
+    background-color: aqua;
+    cursor: pointer;
+}

@@ -1,11 +1,8 @@
 import React from "react";
 import "./header.css";
 
+import TopNav from "./top-nav";
+
 export default function Header(props) {
-  return (
-    <nav>
-      <li className="what">What</li>
-      <li className="new-game">New Game</li>
-    </nav>
-  );
+  return <TopNav />;
 }
